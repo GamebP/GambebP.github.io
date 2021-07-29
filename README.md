@@ -8,4 +8,6 @@
 ###
 ### Contacts 
 ###
-* Discord Gameb#1337
+* Discord: Gameb#1337
+###
+* I mosly not gonna accept (Randoms) Maybe i will. 
