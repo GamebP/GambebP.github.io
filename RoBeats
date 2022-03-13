@@ -3,9 +3,9 @@
 local player = game:GetService("Players").LocalPlayer;
 
 local accuracy_bounds = {
-    Perfect = -20, 
-    Great = -50,
-    Okay = -70
+    Perfect = -0, 
+    Great = -100,
+    Okay = -100
 };
 
 local accuracy_names = {"Perfect", "Great", "Okay"};
