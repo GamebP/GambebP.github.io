@@ -1,6 +1,6 @@
 # What I Do For Living
 ###
-* Im 14.. I play, Roblox with randoms and get scripts for fun to get advantage over others. I mosly Do Other Things, not only game-games.
+* Im {DisplayAge} .. I play, Roblox with randoms and get scripts for fun to get advantage over others. I mosly Do Other Things, not only game-games.
 ###
 # How To Use The Scripts?
 ###
@@ -10,5 +10,5 @@
 
 # Contacts 
 ###
-* Discord: Gameb#1337
-* I mosly not gonna accept (Randoms) Maybe i will. 
+* Discord: GimGam#0071
+* Nice..
