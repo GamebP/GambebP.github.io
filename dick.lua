@@ -1,234 +1,93 @@
-spawn(function()
-local message = Instance.new("Message",workspace)
-message.Text = "Fe penisito loaded"
-wait(11)
-message:Destroy()
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextButton_2 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.237944663, 0, 0.324237555, 0)
+Frame.Size = UDim2.new(0, 340, 0, 203)
+Frame.Active = true
+Frame.Draggable = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.205882356, 0, 0.46305418, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Launch!"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/2AUGXcvm", true))()
 end)
 
-local name = "Torso"
-if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").RigType == Enum.HumanoidRigType.R15 then
-    name = "UpperTorso"
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Size = UDim2.new(0, 340, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Made By RoXploiter Please Give a follow on Tik Tok!"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 17.000
+
+TextButton_2.Name = "TextButton_2"
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_2.Position = UDim2.new(0, 0, 0.753694594, 0)
+TextButton_2.Size = UDim2.new(0, 101, 0, 50)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Close"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 25.000
+
+-- Scripts:
+
+local function UHNWGQO_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.FRAME.Visible = true
+	end)
 end
-
-local ch = game.Players.LocalPlayer.Character
-local prt=Instance.new("Model", workspace)
-local z1 =  Instance.new("Part", prt)
-z1.Name="Torso"
-z1.CanCollide = false
-z1.Anchored = true
-local z2  =Instance.new("Part", prt)
-z2.Name="Head"
-z2.Anchored = true
-z2.CanCollide = false
-local z3 =Instance.new("Humanoid", prt)
-z3.Name="Humanoid"
-z1.Position = Vector3.new(0,9999,0)
-z2.Position = Vector3.new(0,9991,0)
- game.Players.LocalPlayer.Character=prt
-wait(5)
-game.Players.LocalPlayer.Character=ch
-wait(6)
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = true
-end)
-game:GetService('RunService').RenderStepped:connect(function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = true
-end)
-plr = game.Players.LocalPlayer
-mouse = plr:GetMouse()
-
-game.Players.LocalPlayer.Character.HumanoidRootPart:Destroy() 
-
-local Hum = Instance.new("Humanoid")
-    
-
-
-Hum.Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Character.Humanoid.Parent = game.Lighting
---game.Players.LocalPlayer.Character:FindFirstChild("Torso").Name = "Head"
---game.Players.LocalPlayer.Character:FindFirstChild("Head"):Destroy()
---game.Players.LocalPlayer.Character:FindFirstChild(name):Destroy()
---game.Players.LocalPlayer.Character.HumanoidRootPart.Name = "GaiPArt"
-local root =game.Players.LocalPlayer.Character["Right Arm"] -- game.Players.LocalPlayer.Character["Left Leg"]
-root.Name = "HumanoidRootPart"
-
-Hum.HipHeight = 5
-
-           
-workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.HumanoidRootPart
+coroutine.wrap(UHNWGQO_fake_script)()
 
 
 
 
-for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-	
-	if v.Name ~=root.Name and v.Name ~="Humanoid" and v.Name ~= "Left Arm" and v.Name ~= "Left Leg" and v.Name ~= "Right Leg" then
-		
-		v:Destroy()
-		
-	elseif v.Name == "Left Arm" then
-		
-		local bp = Instance.new("BodyPosition",v)
-		bp.MaxForce = Vector3.new(99999,99999,99999)
-		local bg = Instance.new("BodyGyro",v)
-		bg.MaxTorque = Vector3.new(9999999,9999999,999999)
-		 
-		spawn(function()
-			bp.D = 300
-			while true do
-				bp.Position = root.Position+Vector3.new(0,1.8+1.8+1.8-0.3,0)
-				wait()
-			end
-			
-		end)
-		
-			elseif v.Name == "Left Leg" then
-		
-		local bp = Instance.new("BodyPosition",v)
-		bp.MaxForce = Vector3.new(99999,99999,99999)
-				local bg = Instance.new("BodyGyro",v)
-		bg.MaxTorque = Vector3.new(9999999,9999999,999999)
-       
-		spawn(function()
-			bp.D = 300
-			while true do
-				bp.Position = root.Position+Vector3.new(0,1.8-0.3,0)
-				wait()
-			end
-			
-		end)
-		
-			elseif v.Name == "Right Leg" then
-		
-		local bp = Instance.new("BodyPosition",v)
-		bp.MaxForce = Vector3.new(99999,99999,99999)
-				local bg = Instance.new("BodyGyro",v)
-		bg.MaxTorque = Vector3.new(9999999,9999999,999999)
-		spawn(function()
-		 bp.D = 300	
-			while true do
-				bp.Position = root.Position+Vector3.new(0,1.8+1.8-0.3,0)
-				wait()
-			end
-			
-		end)
-	elseif v.Name == root.Name then
-		
-					local bg = Instance.new("BodyGyro",v)
-		bg.MaxTorque = Vector3.new(9999999,9999999,999999)
-		bg.CFrame = CFrame.Angles(math.rad(0),math.rad(0),math.rad(90))
-		
-	end
-	
-	
+
+
+
+local function LLVB_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+ 
+	wait(0.3)
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Made By Roxploiter !";
+		Text = "Please Give me a followers on tiktok! ";
+ 
+	})
+	wait(0.3)
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Launcher Loaded!";
+		Text = "Click launch to load the gui!.";
+	})
 end
-
---local se = Instance.new("SelectionBox",root)
---se.Adornee = root
-
-
-power = 999999 -- change this to make it more or less powerful
-
-power = power*10
-
----
-wait(.1)
---local bambam = Instance.new("BodyThrust")
---bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
---bambam.Force = Vector3.new(power,0,power)
---bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position 
-
-
-
-
-local mouse = game.Players.LocalPlayer:GetMouse()
-
-
-local plr = game.Players.LocalPlayer
-local torso = root
-local flying = true
-local deb = true
-local ctrl = {f = 0, b = 0, l = 0, r = 0}
-local lastctrl = {f = 0, b = 0, l = 0, r = 0}
-local maxspeed = 120
-local speed = 15
-
-
----local bambam = Instance.new("BodyThrust")
----bambam.Parent = torso
---bambam.Force = Vector3.new(9999999,0,9999999)
---bambam.Location = torso.Position
-
-
----
-
-
-function Fly()
-local bg = Instance.new("BodyGyro", torso)
-bg.P = 9e4
-bg.maxTorque = Vector3.new(0, 0, 0)
-bg.cframe = torso.CFrame
-local bv = Instance.new("BodyVelocity", torso)
-bv.velocity = Vector3.new(0,0,0)
-bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
-repeat wait()
-
-if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
-speed = speed+.2
-if speed > maxspeed then
-speed = maxspeed
+coroutine.wrap(LLVB_fake_script)()
+ 
+ 
+ 
+ 
+ local function callback(Text)
+ if Text == "Button1 text" then
+  print ("Answer")
+elseif Text == ("Button2 text") then
+ print ("Answer2")
+ end
 end
-elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
-speed = speed-1
-if speed < 0 then
-speed = 0
-end
-end
-if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
-lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
-elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
-else
-bv.velocity = Vector3.new(0,0,0)
-end
-
-until not flying
-ctrl = {f = 0, b = 0, l = 0, r = 0}
-lastctrl = {f = 0, b = 0, l = 0, r = 0}
-speed = 0
-bg:Destroy()
-bv:Destroy()
-
-end
-mouse.KeyDown:connect(function(key)
-if key:lower() == "e" then
-if flying then flying = false
-else
-flying = true
-Fly()
-end
-elseif key:lower() == "w" then
-ctrl.f = 1
-elseif key:lower() == "s" then
-ctrl.b = -1
-elseif key:lower() == "a" then
-ctrl.l = -1
-elseif key:lower() == "d" then
-ctrl.r = 1
-end
-end)
-mouse.KeyUp:connect(function(key)
-if key:lower() == "w" then
-ctrl.f = 0
-elseif key:lower() == "s" then
-ctrl.b = 0
-elseif key:lower() == "a" then
-ctrl.l = 0
-elseif key:lower() == "d" then
-ctrl.r = 0
-elseif key:lower() == "r" then
-
-end
-end)
-Fly()
