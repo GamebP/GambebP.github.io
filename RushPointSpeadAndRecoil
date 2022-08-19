@@ -1,0 +1,27 @@
+-- No recoil
+for Index, Value in next, getgc(true) do
+       if (type(Value) == 'function') and (islclosure(Value)) and (#getupvalues(Value) == 5) and (type(getupvalue(Value, 4)) == 'table') and (rawget(getupvalue(Value, 4), 'LastAimPunchSpringX')) then
+           local Old = Value;
+           hookfunction(Value, function(...)
+               if (true) then
+                   return;
+               end;
+               return Old(...)
+           end)
+       end;
+   end;
+
+-- No spread
+ModuleLoader = require(game:GetService("ReplicatedStorage").Modules.Shared.ModuleLoader);
+LoadedModules = ModuleLoader.LoadedModules;
+WeaponInfo = LoadedModules.WeaponInfo;
+
+while task.wait(0.4) do
+   for Index, Value in next, WeaponInfo do
+       if (type(Value) == 'table') then
+           Value['Spread'] = 0;
+           Value['MovementSpreadTime'] = 0;
+           Value['MovementSpreadPenalty'] = 0;
+       end;
+   end;
+end;
